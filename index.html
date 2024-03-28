@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+
+    <div class="dropdown-holder">
+        <!--dropdown element-->
+        <div class="dropdown-design">
+        <div id="image-container">
+            <img id="image" src="Images/dropdown moon/144p.png" alt="Placeholder Image">
+        </div>
+        
+        <select id="resolution" class="dropdown-element">
+            <option value="144p">144p</option>
+            <option value="480p">480p</option>
+            <option value="720p">720p</option>
+            <option value="1080p">1080p</option>
+        </select>
+        
+        <script>
+            document.getElementById('resolution').addEventListener('change', function() {
+                var selectedResolution = this.value;
+                var imageUrl;
+                switch(selectedResolution) {
+                    case '144p':
+                        imageUrl = 'Images/dropdown moon/144p.png';
+                        break;
+                    case '480p':
+                        imageUrl = 'Images/dropdown moon/480p.png';
+                        break;
+                    case '720p':
+                        imageUrl = 'Images/dropdown moon/720p.png';
+                        break;
+                    case '1080p':
+                        imageUrl = 'Images/dropdown moon/1080p.png';
+                        break;
+                    default:
+                        imageUrl = 'Images/dropdown moon/144p.png';
+                }
+                document.getElementById('image').src = imageUrl;
+            });
+        </script>
+        </div>
+        
+        <!--dropdown elementt-->
+        </div>
+
+        </body>
+        </html>
